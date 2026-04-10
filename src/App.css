@@ -1,0 +1,252 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Layout */
+.backgroundpart {
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format") center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contentcard {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  padding: 30px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.contentcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 4px solid #ff6b6b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.buttonpart {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.gift-img {
+  margin-top: 20px;
+  width: 60px;
+  opacity: 0.7;
+}
+
+/* Recipe Card Elements */
+.cuisine-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-top: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.placeholder-text {
+  color: #999;
+  font-size: 14px;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.congratshead {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name {
+  margin: 10px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.fullpart {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.textclr {
+  color: #ff6b6b;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+}
+
+.modal-content label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Buttons */
+.profilebutton {
+  background: white;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 16px;
+  color: #764ba2;
+}
+
+.profilebutton:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+  background: #f8f9ff;
+}
+
+.submitbtn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.submitbtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255,107,107,0.4);
+}
+
+.submitbtn:disabled {
+  background: linear-gradient(135deg, #ccc, #aaa);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.cancelbuttonarea {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+}
+
+.cancelbuttonarea .profilebutton {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* Error Styles */
+.error-input {
+  border-color: #ff6b6b !important;
+  background-color: #fff5f5;
+}
+
+.error-text {
+  color: #ff6b6b;
+  font-size: 11px;
+  display: block;
+  text-align: left;
+  margin: -5px 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contentcard { max-width: 340px; padding: 25px; }
+  .profile-pic { width: 100px; height: 100px; }
+  .name { font-size: 20px; }
+  .congratshead { font-size: 24px; }
+}
+
+@media (max-width: 500px) {
+  .contentcard { padding: 20px 15px; max-width: 300px; }
+  .congratshead { font-size: 22px; }
+  .name { font-size: 18px; }
+  .gift-img { width: 50px; }
+  .profile-pic { width: 90px; height: 90px; }
+  .modal-content { padding: 20px; width: 85%; }
+}
+
+@media (max-width: 380px) {
+  .contentcard { max-width: 270px; padding: 18px; }
+  .profile-pic { width: 80px; height: 80px; }
+  .cuisine-badge { font-size: 12px; padding: 4px 12px; }
+}
